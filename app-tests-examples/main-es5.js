@@ -222,22 +222,22 @@ var UsersService = /** @class */ (function () {
     }
     UsersService.prototype.getAllUsers = function () {
         return this.http
-            .get('http://localhost:3000/api/users')
+            .get('https://node-testing-examples-fmf.herokuapp.com/api/users')
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) { return res.payload; }));
     };
     UsersService.prototype.getUserById = function (userId) {
         return this.http
-            .get("http://localhost:3000/api/users/" + userId)
+            .get("https://node-testing-examples-fmf.herokuapp.com/api/users/" + userId)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) { return res.payload; }));
     };
     UsersService.prototype.editUser = function (user) {
         return this.http
-            .put("http://localhost:3000/api/users", user)
+            .put("https://node-testing-examples-fmf.herokuapp.com/api/users", user)
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (res) { return res.payload; }));
     };
     UsersService.prototype.deleterUser = function (userId) {
         return this.http
-            .delete("http://localhost:3000/api/users/delete/" + userId);
+            .delete("https://node-testing-examples-fmf.herokuapp.com/api/users/delete/" + userId);
     };
     UsersService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
