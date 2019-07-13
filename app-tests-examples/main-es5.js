@@ -76,7 +76,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var routes = [
     { path: 'main', component: _users_adm_users_adm_component__WEBPACK_IMPORTED_MODULE_3__["UsersAdmComponent"] },
-    { path: '', redirectTo: 'main' }
+    { path: '', redirectTo: 'main', pathMatch: 'full' }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
