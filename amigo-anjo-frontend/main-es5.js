@@ -821,7 +821,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!******************************************!*\
   !*** ./src/app/shared/services/index.ts ***!
   \******************************************/
-/*! exports provided: ApiService, SidenavService, DomService, MiscellaneousService */
+/*! exports provided: SidenavService, ApiService, DomService, MiscellaneousService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
