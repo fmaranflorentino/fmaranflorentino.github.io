@@ -1,0 +1,26 @@
+app-message {
+  border-bottom: 1px solid #eae4e4;
+
+  @extend %display-flex;
+  flex-direction: row;
+
+  width: 100%;
+  height: 85px;
+
+  padding: 20px;
+
+  div {
+    @extend %display-flex;
+    align-items: center;
+    padding: 5px;
+
+    &:nth-child(2) {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    p {
+      font-size: 11px;
+    }
+  }
+}

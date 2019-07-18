@@ -1,0 +1,28 @@
+app-new-message {
+  h2 {
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-transform: Uppercase;
+  }
+
+  form {
+    width: 600px;
+    margin: 0 auto;
+
+    .mat-form-field {
+      @extend %display-block;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  app-new-message {
+    h2 {
+      font-size: 18px !important;
+    }
+
+    form {
+      width: 100%;
+    }
+  }
+}

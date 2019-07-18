@@ -1,0 +1,18 @@
+app-messages-list {
+  background-color: #fff;
+  border-radius: 8px;
+
+  @extend %display-block;
+  height: 100%;
+
+  .skeleton {
+    border-radius: 8px;
+    @extend %display-block;
+    width: 80%;
+    height: 55px;
+
+    margin: 0 auto 15px auto;
+
+    @extend .animated-background;
+  }
+}

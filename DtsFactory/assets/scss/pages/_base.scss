@@ -1,0 +1,18 @@
+app-base {
+  main {
+    background-color: #eae4e4;
+    @extend %display-block;
+    width: 100%;
+    height: calc(100vh - 64px);
+
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  app-base {
+    main {
+      height: auto;
+    }
+  }
+}

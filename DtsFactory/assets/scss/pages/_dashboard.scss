@@ -1,0 +1,88 @@
+app-dashboard {
+  .container {
+    height: 100%;
+    @extend %display-flex;
+
+    .messages-list {
+      width: 30%;
+    }
+
+    .message-detail {
+      background-color: #fff;
+      border-radius: 8px;
+
+      width: calc(70% - 40px);
+      margin: 0 0 0 40px;
+      padding: 40px;
+
+      h3 {
+        font-size: 30px;
+      }
+
+      small {
+        padding: 0 0 20px 0;
+        display: block;
+      }
+
+      &.empty {
+        @extend %display-flex;
+        align-items: center;
+        justify-content: center;
+
+        mat-icon {
+          font-size: 40px;
+          transform: rotate(180deg);
+
+          position: relative;
+          top: 20px;
+          left: 12px;
+        }
+      }
+    }
+  }
+
+  .no-messages {
+    @extend %display-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    p {
+      font-size: 25px;
+    }
+
+    button {
+      text-transform: uppercase;
+      font-size: 18px;
+
+      padding: 15px;
+      margin: 20px 0 0 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  app-dashboard {
+    .container {
+      flex-direction: column-reverse;
+
+      .messages-list,
+      .message-detail {
+        display: block;
+        width: 100%;
+      }
+
+
+      .message-detail {
+        margin: 0 0 20px 0;
+
+        mat-icon {
+          display: none;
+        }
+      }
+    }
+  }
+}
