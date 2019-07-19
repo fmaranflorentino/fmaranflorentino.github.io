@@ -17656,7 +17656,7 @@ module.exports = "<ng-container *ngIf=\"messagesList.length > 0 && !skeleton.isA
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"messages-list\" *ngIf=\"messagesList && messagesList.length !== 0\">\n    <app-messages-list\n      [messagesList]=\"messagesList\"\n      (messageSelected)=\"handleMessageDetail($event)\"\n    ></app-messages-list>\n  </div>\n\n  <div\n    class=\"message-detail\"\n    [ngClass]=\"{ empty: !selectedMessage }\"\n    *ngIf=\"messagesList && messagesList.length !== 0\"\n  >\n    <ng-container *ngIf=\"selectedMessage\">\n      <h3>\n        {{ selectedMessage?.message?.messageTitle }}\n      </h3>\n\n      <small>\n        {{ dateFormated }}\n      </small>\n\n      <p>\n        {{ selectedMessage?.message?.messageText }}\n      </p>\n    </ng-container>\n\n    <div *ngIf=\"!selectedMessage\">\n      <mat-icon>arrow_right_alt</mat-icon>\n      <p>Selecione uma mensagem para ver seus detalhes.</p>\n    </div>\n  </div>\n</div>\n\n<div class=\"no-messages\" *ngIf=\"messagesList && messagesList.length === 0\">\n  <p>Você ainda não possui nenhuma mensagem!</p>\n\n  <button\n    mat-raised-button\n    color=\"primary\"\n    [routerLink]=\"['/dashboard/new-message']\"\n  >\n    Cadastrar nova mensagem\n  </button>\n</div>\n"
+module.exports = "<div class=\"container\" *ngIf=\"messagesList && messagesList.length !== 0\">\n  <div class=\"messages-list\">\n    <app-messages-list\n      [messagesList]=\"messagesList\"\n      (messageSelected)=\"handleMessageDetail($event)\"\n    ></app-messages-list>\n  </div>\n\n  <div\n    class=\"message-detail\"\n    [ngClass]=\"{ empty: !selectedMessage }\"\n    *ngIf=\"messagesList && messagesList.length !== 0\"\n  >\n    <ng-container *ngIf=\"selectedMessage\">\n      <h3>\n        {{ selectedMessage?.message?.messageTitle }}\n      </h3>\n\n      <small>\n        {{ dateFormated }}\n      </small>\n\n      <p>\n        {{ selectedMessage?.message?.messageText }}\n      </p>\n    </ng-container>\n\n    <div *ngIf=\"!selectedMessage\">\n      <mat-icon>arrow_right_alt</mat-icon>\n      <p>Selecione uma mensagem para ver seus detalhes.</p>\n    </div>\n  </div>\n</div>\n\n<div class=\"no-messages\" *ngIf=\"messagesList && messagesList.length === 0\">\n  <p>Você ainda não possui nenhuma mensagem!</p>\n\n  <button\n    mat-raised-button\n    color=\"primary\"\n    [routerLink]=\"['/dashboard/new-message']\"\n  >\n    Cadastrar nova mensagem\n  </button>\n</div>\n"
 
 /***/ }),
 
@@ -18204,7 +18204,6 @@ var DashboardComponent = /** @class */ (function () {
                     .getAllMessages()
                     .subscribe(function (resp) {
                     _this.messagesList = resp;
-                    console.log('buc', _this.messagesList);
                     _this.skeleton$
                         .toggleSkeletonStatus();
                     resolve();
