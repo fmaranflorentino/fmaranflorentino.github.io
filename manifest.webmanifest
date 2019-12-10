@@ -1,8 +1,8 @@
 {
-  "name": "marketclub-ui",
-  "short_name": "marketclub-ui",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Marketclub Web App",
+  "short_name": "Marketclub",
+  "theme_color": "#9053a1",
+  "background_color": "#013e43",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
