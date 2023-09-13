@@ -1,0 +1,110 @@
+app-movies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    .no-results {
+      color: #fff;
+    }
+  
+    .mat-paginator {
+      margin-top: 20px;
+    }
+    .mat-paginator-container {
+      color: #fff;
+      background-color: #101010;
+    }
+  
+    @media screen and (max-width: 767px) {
+      padding: 0 30px;
+    }
+  }
+  
+  .genres-list {
+    margin-top: 20px;
+    li {
+      background: rgba(#ccc, 0.2);
+      color: rgba(#ccc, 0.5);
+      border-radius: rem(4px);
+      font-size: rem(12px);
+      letter-spacing: rem(1px);
+  
+      padding: rem(6px) rem(9px);
+      display: inline-block;
+  
+      &:not(:last-of-type) {
+        margin-right: rem(15px);
+      }
+  
+      margin-bottom: 10px;
+  
+      &.activeGenre {
+        background: #fff;
+        color: #999;
+      }
+    }
+  }
+  
+  .movies-search {
+    width: rem(900px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  
+    h2,
+    span {
+      color: #fff;
+    }
+  
+    span {
+      margin: 15px 0;
+    }
+  
+    input {
+      width: 100%;
+      padding: 12px 20px;
+      border-radius: 4px;
+      border: 0;
+      background-color: rgba(#fff, 0.1);
+    }
+  
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  
+  .movie-card-list {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    gap: rem(16px);
+  
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  .movies-featured {
+    width: rem(1200px);
+  
+    &__title {
+      display: flex;
+      align-items: center;
+      padding: 30px 0;
+    }
+  
+    img {
+      width: 30px;
+      margin-right: 10px;
+    }
+  
+    h3 {
+      color: #fff;
+    }
+  
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
